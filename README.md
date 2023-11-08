@@ -1,41 +1,47 @@
 # DrinksApp
 
-Install python
+## Configuration
 
-Check version 
-    >> python --version
+#### 1. Install python
 
-Create Virtual Environment 
-    >> python -m venv .venv
+#### 2. Check version 
+    python --version
 
-Activate .venv 
-    >> . .venv/scripts/activate
+#### 3. Create Virtual Environment 
+    python -m venv .venv
 
-Install Django framework
-    >> pip install django
-    >> pip install djangorestframework
+#### 4. Activate .venv 
+    . .venv/scripts/activate
 
-Initiate the project 
-    >> django-admin startproject myapp . 
+#### 5. Install Django framework
+    pip install django
+    pip install djangorestframework
 
-Run the server
-    >> python manage.py runserver
-    [server will be running (by default on http://127.0.0.1:8000/)]
+#### 6. Initiate the project 
+    django-admin startproject myapp . 
 
-Apply migration
-    >> python manage.py migrate
+#### 7. Run the server
+    python manage.py runserver
 
-Crete admin account
-    >> python manage.py createsuperuser
-    [login admin page via http://127.0.0.1:8000/admin (Server should be running)]
+- Server will be running 
+- By default on http://127.0.0.1:8000/
+
+#### 8. Apply migration
+    python manage.py migrate
+
+#### 9. Create admin account
+    python manage.py createsuperuser
+
+- login admin page via [http://127.0.0.1:8000/admin](http://127.0.0.1:8000/admin)
+- Note that Server should be running
 
 
 
 
-Useful Django commands
+## Useful Django commands
 
-To check all the available commands in django-admin
-    >> django_admin
+#### To check all the available commands in django-admin
+    django_admin
 
-To check all the available commands in manage.py
-    >> python manage.py
+#### To check all the available commands in manage.py
+    python manage.py
