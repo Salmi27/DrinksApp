@@ -36,6 +36,18 @@
 - Note that Server should be running
 
 
+## Creating your own migration
+
+#### 1. Create a file named `models` in your myapp folder.
+#### 2. Copy the code from the `models` file in the repo.
+#### 3. Add your `myapp` folder in `INSTALLED APPS` in setting.py
+#### 4. Create migrate using following command
+    python manage.py makemigrations myapp
+#### 5. Migrate to databse
+    python manage.py migrate
+#### 6. Reflect change in remote admin
+Create admin.py folder in myapp
+Copy the code from admin.py in repo
 
 
 ## Useful Django commands
