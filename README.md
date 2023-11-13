@@ -57,3 +57,20 @@ Copy the code from admin.py in repo
 
 #### To check all the available commands in manage.py
     python manage.py
+
+# Notes
+
+Rsponse() method uses to return the response data. In order to get the data in JSON format we need to add .json extension in url (http://127.0.0.1:8000/drinks.json)
+To implement this in source code, following should be done:
+
+In urls.py => 
+from rest_framework.urlpatterns import format_suffix_patterns
+urlpatterns = [
+    ...paths...
+]
+urlpatterns = format_suffix_patterns(urlpatterns)
+
+In views.py =>
+In http method set parameter format=None
+example: def drink_detail(request,id,format=None):
+
