@@ -60,6 +60,7 @@ Copy the code from admin.py in repo
 
 # Notes
 
+## Getting JSON response
 Rsponse() method uses to return the response data. In order to get the data in JSON format we need to add .json extension in url (http://127.0.0.1:8000/drinks.json)
 To implement this in source code, following should be done:
 
@@ -73,4 +74,31 @@ urlpatterns = format_suffix_patterns(urlpatterns)
 In views.py =>
 In http method set parameter format=None
 example: def drink_detail(request,id,format=None):
+
+## Cross-Origin Resourse Sharing (CORS)
+    pip install django-cors-headers
+
+In settings.py =>
+
+INSTALLED_APPS = [
+    # ...
+    'corsheaders',
+    # ...
+]
+
+In settings.py =>
+
+MIDDLEWARE = [
+    # ...
+    'corsheaders.middleware.CorsMiddleware',
+    # ...
+]
+
+In setting.py =>
+
+CORS_ALLOWED_ORIGINS = [
+    "http://127.0.0.1:5500",
+    # Add other origins as needed
+]
+
 
